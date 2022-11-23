@@ -147,27 +147,27 @@ inquirer
         },
     ])
     .then((answers) => {
-        if (answers.license === 'GNU General Public License v3.0') {
-            answers.licenseURL = 'https://www.gnu.org/licenses/gpl-3.0';
-            answers.licenseBadge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
-        }
-        else if (answers.license === 'MIT License') {
-            answers.licenseURL = 'https://opensource.org/licenses/MIT';
-            answers.licenseBadge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-        }
-        else if (answers.license === 'Mozilla Public License 2.0') {
-            answers.licenseURL = 'https://www.mozilla.org/en-US/MPL/2.0/';
-            answers.licenseBadge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://www.mozilla.org/en-US/MPL/2.0/)'
-        }
-        else if (answers.license === 'The Unlicense') {
-            answers.licenseURL = 'https://unlicense.org/';
-            answers.licenseBadge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
+        // if (answers.license === 'GNU General Public License v3.0') {
+        //     answers.licenseURL = 'https://www.gnu.org/licenses/gpl-3.0';
+        //     answers.licenseBadge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+        // }
+        // else if (answers.license === 'MIT License') {
+        //     answers.licenseURL = 'https://opensource.org/licenses/MIT';
+        //     answers.licenseBadge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+        // }
+        // else if (answers.license === 'Mozilla Public License 2.0') {
+        //     answers.licenseURL = 'https://www.mozilla.org/en-US/MPL/2.0/';
+        //     answers.licenseBadge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://www.mozilla.org/en-US/MPL/2.0/)'
+        // }
+        // else if (answers.license === 'The Unlicense') {
+        //     answers.licenseURL = 'https://unlicense.org/';
+        //     answers.licenseBadge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
 
-        };
+        // };
 
         const htmlPageContent = generateHTML(answers);
 
-        fs.writeFile('index.html', htmlPageContent, (err) =>
+        fs.writeFile('indexTest.html', htmlPageContent, (err) =>
             err ? console.log(err) : console.log('Successfully created index.html!')
         );
     });
